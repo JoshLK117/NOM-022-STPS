@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipo - NOM-022-STPS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+    }
+
+    /* Barra de navegación */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6a00;
+    }
+
+    header {
+      padding: 100px 20px 60px;
+      text-align: center;
+      background: #111;
+      clip-path: ellipse(100% 85% at 50% 15%);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #ff6a00;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      color: #ff6a00;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    /* Tarjetas de integrantes */
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .member-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .member-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    .member-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #ff6a00;
+    }
+
+    .member-card h3 {
+      margin: 10px 0;
+      color: #ff6a00;
+    }
+
+    .member-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Bibliografía */
+    .bibliografia {
+      margin-top: 60px;
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    .bibliografia h2 {
+      color: #ee0979;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .bibliografia ul {
+      list-style-type: disc;
+      padding-left: 40px;
+    }
+
+    .bibliografia ul li {
+      margin: 10px 0;
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    footer {
+      background: rgba(0,0,0,0.8);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Botones de navegación -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="saber-mas.html">Saber más</a>
+    <a href="equipo.html">Equipo</a>
+  </nav>
+
+  <header>
+    <h1>Nuestro Equipo</h1>
+    <p>Introducción a la Seguridad Industrial</p>
+  </header>
+
+  <section>
+    <h2>Integrantes</h2>
+    <div class="team-container">
+      <div class="member-card">
+        <h3>Sánchez Sánchez Kimberly Yahaira</h3>
+      </div>
+      <div class="member-card">
+        <h3>Sánchez Morales Alondra</h3>
+      </div>
+      <div class="member-card">
+        <h3>Segura Sandoval Israel Joshua</h3>
+      </div>
+      <div class="member-card">
+        <h3>Velazquez Ruiz Natalia Yoselin</h3>
+      </div>
+    </div>
+
+    <div class="bibliografia">
+      <h2>Bibliografía</h2>
+      <ul>
+        <li>Secretaría del Trabajo y Previsión Social. NOM-022-STPS-2015.</li>
+        <li>Manual de seguridad eléctrica en centros de trabajo, STPS.</li>
+        <li>www.normasoficiales.mx</li>
+        <li>www.gob.mx</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Seguridad Laboral | NOM-022-STPS-2015</p>
+  </footer>
+</body>
+</html>

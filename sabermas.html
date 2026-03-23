@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saber más - Electricidad Estática</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Barra de navegación */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6a00;
+    }
+
+    header {
+      padding: 100px 20px 60px;
+      text-align: center;
+      background: #111;
+      clip-path: ellipse(100% 85% at 50% 15%);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #ff6a00;
+      animation: fadeInDown 2s ease forwards;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 15px;
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      color: #ff6a00;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+
+    /* Gráficas simuladas con barras */
+    .chart {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .bar {
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bar span {
+      display: block;
+      height: 30px;
+      background: linear-gradient(45deg, #ff6a00, #ee0979);
+      text-align: right;
+      padding-right: 10px;
+      line-height: 30px;
+      font-weight: bold;
+      color: #fff;
+      animation: grow 2s ease forwards;
+    }
+
+    @keyframes grow {
+      from { width: 0; }
+      to { width: var(--value); }
+    }
+
+    /* Video */
+    .video {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .video iframe {
+      width: 80%;
+      height: 400px;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    /* Animaciones */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      background: rgba(0,0,0,0.8);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Botones de navegación -->
+  <nav>
+    <a href="inicio.html">Inicio</a>
+    <a href="saber-mas.html">Saber más</a>
+    <a href="equipo.html">Equipo</a>
+  </nav>
+
+  <header>
+    <h1>Riesgos de la Electricidad Estática</h1>
+    <p>Conoce los peligros y medidas de prevención</p>
+  </header>
+
+  <section>
+    <h2>Impacto en los centros de trabajo</h2>
+    <p>
+      La electricidad estática puede provocar incendios, explosiones y daños a equipos electrónicos sensibles. 
+      En ambientes donde se manejan sustancias inflamables o explosivas, el riesgo se incrementa considerablemente. 
+      Además, las descargas pueden afectar la salud de los trabajadores, generando accidentes y pérdidas económicas.
+    </p>
+
+    <h2>Porcentaje de accidentes relacionados</h2>
+    <div class="chart">
+      <div class="bar"><span style="--value:70%">70% - Incendios</span></div>
+      <div class="bar"><span style="--value:50%">50% - Daños a equipos</span></div>
+      <div class="bar"><span style="--value:30%">30% - Lesiones personales</span></div>
+      <div class="bar"><span style="--value:20%">20% - Explosiones</span></div>
+    </div>
+
+    <h2>Video explicativo</h2>
+    <div class="video">
+      <!-- Aquí va tu video de YouTube -->
+      <iframe src="https://www.youtube.com/embed/KSGemQowtPc" 
+              title="Video sobre electricidad estática" 
+              allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Seguridad Laboral | NOM-022-STPS-2015</p>
+  </footer>
+</body>
+</html>
+

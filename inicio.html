@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOM-022-STPS-2015</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6a00;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      background: linear-gradient(135deg, #1f1c2c, #3a3a52);
+      clip-path: ellipse(100% 85% at 50% 15%);
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      animation: fadeInDown 2s ease forwards;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+      background: #f5f5f5;
+      color: #333;
+      position: relative;
+    }
+
+    section:nth-child(even) {
+      background: #eaeaea;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff6a00;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    section h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    h3 + p {
+      text-align: justify;
+    }
+
+    
+    div {
+  background: #f9f9f9;              /* Fondo claro para diferenciar */
+  border-radius: 15px;              /* Bordes redondeados */
+  padding: 30px;                    /* Espaciado interno */
+  margin: 40px auto;                /* Separación respecto a otros bloques */
+  max-width: 800px;                 /* Limita el ancho para mejor lectura */
+  box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+#definiciones h3 {                  
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#definiciones ul {
+      list-style: none; /* Quita los puntos por defecto */
+      padding: 0;
+      max-width: 600px;
+      margin: 30px auto;
+    }
+
+    #definiciones ul li {
+      background: linear-gradient(135deg, #00fff2, #093eee);
+      color: #fff;
+      margin: 10px 0;
+      padding: 15px 20px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+     ul li::before {
+      position: absolute;
+      left: 15px;
+      font-weight: bold;
+    }
+
+    ul li:hover {
+      transform: translateX(10px);
+      box-shadow: 0 0 15px rgba(255,255,255,0.6);
+    }
+
+
+
+
+
+
+
+    section h4 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+
+    section::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.1));
+      z-index: -1;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      border-radius: 15px;
+      padding: 25px;
+      width: 280px;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+      overflow: hidden;    
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+    }
+
+    @keyframes shine {
+      0% { transform: rotate(0deg) translate(0,0); }
+      100% { transform: rotate(360deg) translate(0,0); }
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 0 30px rgba(255,255,255,0.6);
+    }
+
+    /* Títulos dentro de la tarjeta */
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+/* Texto */
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+#capacitacion {
+  background: #f9f9f9;
+  border-left: 6px solid #ff6a00;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+#capacitacion h3 {
+  color: #ee0979;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#capacitacion p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Lista con viñetas normales pero estilizadas */
+#capacitacion ul {
+  list-style-type: disc;   /* Viñetas clásicas */
+  padding-left: 40px;      /* Espaciado para que se vean bien */
+}
+
+#capacitacion ul li {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #0d0a0a;
+  transition: color 0.3s;
+  text-align: justify;
+}
+
+#capacitacion ul li:hover {
+  color: #ff6a00;          /* Resalta al pasar el mouse */
+}
+
+
+
+
+    footer {
+      background: rgba(0,0,0,0.8);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="sabermas.html">Saber más</a>
+    <a href="equipo.html">Equipo</a>
+  </nav>
+
+  <header id="inicio">
+    <h1>NOM-022-STPS-2015</h1>
+    <p>Electricidad estática en los centros de trabajo - Condiciones de seguridad</p>
+  </header>
+
+  <section id="norma">
+    <h2>¿Qué es la NOM-022-STPS?</h2>
+    <p>
+      La NOM-022-STPS-2015 establece las condiciones de seguridad para prevenir riesgos derivados de la electricidad estática en los centros de trabajo. 
+      Su objetivo es proteger la integridad física de los trabajadores y evitar daños a instalaciones y equipos.
+    </p>
+    <h3>Campo de aplicación</h3>
+    <p>
+      Esta Norma rige en todo el territorio nacional y aplica en las áreas de los centros donde se almacenen, manejen
+      o transporten sustancias infamables o explosivas, o en aquellas en que, por la naturaleza de sus procesos, materiales y equipos,
+      sean capces de almacenar o generar eléctricas estáticas.
+    </p>
+    <div id="definiciones">
+       <h3>Definiciones</h3>
+       <ul>
+         <li>Electricidad estática: Cargas eléctricas generadas o almacenadas en materiales sólidos, partículas o fluidos.</li>
+         <li>
+           Carga eléctrica estática: La propiedad de la materia que se manifiesta por la pérdida o ganancia de electrones,
+           generalmente en materiales aislantes de la electricidad, o materiales cnductores aislados de tierra, que han estado en contacto o bajo presión. 
+         </li>
+         <li>Puesta a tierra: Conexión de sistemas, equipos y materiales a la tierra para asegurar un potencial eléctrico cero y drenar cargas acumuladas.</li>
+         <li>
+           Sistema de protección contra descargas eléctricas atmosféricas: Conjunto de pararrayos, red de puesta a tierra y medidas internas para proteger las instalaciones y personas.
+         </li>
+         <li>
+          Conexión equipotencial: Unión eléctrica de partes metálicas para mantener el mismo potencial eléctrico y evitar diferencias peligrosas.
+         </li>
+       </ul>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <h4>Obligaciones del patrón</h4>
+        <p>Instalar sistemas de puesta a tierra, capacitar al personal y realizar mediciones periódicas.</p>
+      </div>
+      <div class="card">
+        <h4>Obligaciones de los trabajadores</h4>
+        <p>Seguir las medidas de seguridad, usar equipo de protección y reportar anomalías.</p>
+      </div>
+      <div class="card">
+        <h4>Evaluación</h4>
+        <p>La norma contempla unidades de verificación y laboratorios de prueba para asegurar el cumplimiento.</p>
+      </div>
+    </div>
+    <div id="capacitacion">
+      <h3>Capacitación y adiestramiento</h3>
+      <p>
+       A los trabajadores involucrados en actividades en las que se genere o acumule electricidad estática, en la instalación, revisión de sistemas de puesta a tierra y sistemas de pararrayos, así como en la determinación de la resistencia a tierra y continuidad de las redes, se les deberá proporcionar capacitación y adiestramiento para llevar a cabo estas actividades y prevenir los riesgos derivados de estas actividades, la cual comprenderá, al menos, lo siguiente:
+      </p>
+      <ul>
+        <li>
+          Los fundamentos técnicos sobre la generación y acumulación de cargas electricas.
+        </li>
+        <li>
+          Los procesos en los que ocurre la generacion y acomulación de cargas elésctricas estáticas, con énfasis en los que se llevan
+          a cabo en su centro de trabajo, y los mecanismos físicos por los cuales se da en cada caso este fenómeno.
+        </li>
+        <li>
+          Los materiales sólidos y fluidos, aislantes, semiconductores y conductores, susceptibles de cargarse electrostáticamente.
+        </li>
+        <li>
+          Los riesgos ocasionados por la electricidad estática, los métodos disponibles para su control, disipación y descarga.
+        </li>
+        <li>
+          Los riesgos derivados de descargas eléctricas atmosféricas y las medidas de seguridad para evitarlos.
+        </li>
+        <li>
+          Las medidas de seguridad que señala esta Norma para prevenir los riesgos por generación y acumulación de electricidad estática.
+        </li>
+        <li>
+          Las condiciones de seguridad implementadas en el centro de trabajo, de manera adicional a lo dispuesto por la presente Norma.
+        </li>
+        <li>
+          Los procedimientos, en su caso, para llevar a cabo la instalación, revisión de sistemas de puesta a tierra y sistemas de pararrayos, así como para la determinación de la resistencia a tierra y continuidad de las redes.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="equipo">
+    <h2>Equipo</h2>
+    <p>Sánchez Sánchez Kimberly Yahaira</p>
+    <p>Sánchez Morales Alondra</p>
+    <p>Segura Sandoval Israel Joshua</p>
+    <p>Vleazquez Ruiz Natalia Yoselin</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Seguridad Laboral | NOM-022-STPS-2015 | LK</p>
+  </footer>
+</body>
+</html>
